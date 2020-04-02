@@ -41,7 +41,7 @@ function Search() {
             </form>
             <section>
                 {books.map(
-                    book=> <BookCard volumeInfo={book.volumeInfo} save={saveToDB}/>
+                    book=> <BookCard volumeInfo={book.volumeInfo} save={saveToDB} search={true}/>
                 )}
             </section>
         </article>
