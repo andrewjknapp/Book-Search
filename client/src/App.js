@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Header from "./components/assets/Header";
+import React from "react";
+import Header from "./components/Header";
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import Search from "./components/pages/Search";
 import Saved from "./components/pages/Saved";
