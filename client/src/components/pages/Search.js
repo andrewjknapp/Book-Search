@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import API from "../utils/API";
 import BookCard from "../BookCard";
+import "../assets/css/style.css";
 
 function Search() {
 
