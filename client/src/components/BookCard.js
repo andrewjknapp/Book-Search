@@ -14,7 +14,7 @@ function BookCard(props) {
     return (
         <section className="bookCard">
             <div className="image">
-                <img src={imageLinks.thumbnail ? imageLinks.thumbnail : null} alt="Book Cover"/>
+                <img src={imageLinks !== undefined ? imageLinks.thumbnail : "https://via.placeholder.com/150C/O https://placeholder.com/"} alt="Book Cover"/>
             </div>
             <h2>{title}</h2>
             <p className="authors">{authors ? authors.join(", "): null}</p>

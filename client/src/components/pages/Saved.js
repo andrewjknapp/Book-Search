@@ -12,8 +12,6 @@ function Saved() {
             .then(res=>setSavedBooks(res.data));
     },[])
 
-    console.log(savedBooks);
-
     function deleteBook(event) {
         const bookId = event.target.getAttribute("id");
         API.deleteBook(bookId);
@@ -22,7 +20,7 @@ function Saved() {
     return (
         <article className="savedContainer">
             <h1>Saved</h1>
-            {savedBooks.map(book => <BookCard volumeInfo={book} save={deleteBook} search={false}/>)}
+            {savedBooks.map((book, i) => <div key={i}><BookCard volumeInfo={book} save={deleteBook} search={false}/></div>)}
         </article>
     )
 }

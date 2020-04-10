@@ -49,18 +49,20 @@ header {
 
 .bookCard {
     background-color: rgb(255, 234, 206);
-    margin: 20px 10px;
+    margin: 20px auto;
     padding: 10px;
     border-radius: 5px;
     border-style: solid;
     border-width: 2px;
     position: relative;
+    max-width: 700px;
 
     img {
         width: 100%;
     }
     .image {
         width: 50%;
+        max-width: 300px;
         margin: 5px auto;
     }
 

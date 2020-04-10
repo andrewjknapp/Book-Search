@@ -23,7 +23,6 @@ function Search() {
 
     function saveToDB(event) {
         const book = JSON.parse(event.target.getAttribute("book"));
-        console.log(book);
         API.saveBook(book)
     }
 
@@ -44,7 +43,7 @@ function Search() {
             </section>
             <section className="results">
                 {books.map(
-                    book=> <BookCard volumeInfo={book.volumeInfo} save={saveToDB} search={true}/>
+                    (book, i)=> <div key={i}><BookCard volumeInfo={book.volumeInfo} save={saveToDB} search={true}/></div>
                 )}
             </section>
         </article>
