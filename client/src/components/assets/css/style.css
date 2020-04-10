@@ -1,1 +1,1 @@
-*{box-sizing:border-box;margin:0;padding:0}header{background-color:#a6ccff}header h1{color:white}header Link{text-decoration:none}
+*{box-sizing:border-box;margin:0;padding:0}header{background-color:#a6ccff;display:flex;justify-content:space-evenly;padding:1em}header h1{color:#fff}header h1:hover{color:#f2f2f2}header a{text-decoration:none}

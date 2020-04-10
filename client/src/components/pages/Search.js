@@ -29,7 +29,7 @@ function Search() {
 
 
     return (
-        <article>
+        <article className="searchContainer">
             <h1>Search</h1>
             <form>
                 <input
@@ -40,7 +40,7 @@ function Search() {
                     onClick={handleSubmit}
                 >Search</button>
             </form>
-            <section>
+            <section className="results">
                 {books.map(
                     book=> <BookCard volumeInfo={book.volumeInfo} save={saveToDB} search={true}/>
                 )}

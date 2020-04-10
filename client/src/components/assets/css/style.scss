@@ -1,4 +1,5 @@
 $primaryColor: rgb(166, 204, 255);
+$linkColor: white;
 
 * {
     box-sizing: border-box;
@@ -8,11 +9,20 @@ $primaryColor: rgb(166, 204, 255);
 
 header {
     background-color: $primaryColor;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+
     h1 {
-        color: white;
+        color: $linkColor;
+        &:hover {
+            color: darken($linkColor, 5%)
+        }
     }
 
-    Link {
+    a {
         text-decoration: none;
     }
+
+    
 }
