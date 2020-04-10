@@ -7,6 +7,10 @@ $linkColor: white;
     padding: 0;
 }
 
+body {
+    background-color: lighten($primaryColor, 14);
+}
+
 header {
     background-color: $primaryColor;
     display: flex;
@@ -15,6 +19,7 @@ header {
 
     h1 {
         color: $linkColor;
+        font-size: 1em;
         &:hover {
             color: darken($linkColor, 5%)
         }
@@ -25,4 +30,73 @@ header {
     }
 
     
+}
+
+.search {
+    text-align: center;
+
+    h1 {
+        margin: 10px;
+    }
+
+    form {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    
+}
+
+.bookCard {
+    background-color: rgb(255, 234, 206);
+    margin: 20px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+    .image {
+        width: 50%;
+        margin: 5px auto;
+    }
+
+    h2 {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .authors {
+        text-align: center;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    .infoLink {
+        text-align: center;
+    }
+
+    .bookBtn {
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        border-radius: 5px;
+        background-color: $primaryColor;
+        color: white;
+        padding: 2px;
+    }
+    
+}
+
+.savedContainer {
+    padding: 10px;
+
+    h1 {
+        text-align: center;
+    }
 }

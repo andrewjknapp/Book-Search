@@ -30,16 +30,18 @@ function Search() {
 
     return (
         <article className="searchContainer">
-            <h1>Search</h1>
-            <form>
-                <input
-                    value={search}
-                    onChange={handleInputChange}
-                />
-                <button
-                    onClick={handleSubmit}
-                >Search</button>
-            </form>
+            <section className="search">
+                <h1>Search</h1>
+                <form>
+                    <input
+                        value={search}
+                        onChange={handleInputChange}
+                    />
+                    <button
+                        onClick={handleSubmit}
+                    >Search</button>
+                </form>
+            </section>
             <section className="results">
                 {books.map(
                     book=> <BookCard volumeInfo={book.volumeInfo} save={saveToDB} search={true}/>

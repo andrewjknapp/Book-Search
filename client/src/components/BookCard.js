@@ -12,15 +12,17 @@ function BookCard(props) {
     }
 
     return (
-        <section>
-            <img src={imageLinks.thumbnail ? imageLinks.thumbnail : null} alt="Book Cover"/>
+        <section className="bookCard">
+            <div className="image">
+                <img src={imageLinks.thumbnail ? imageLinks.thumbnail : null} alt="Book Cover"/>
+            </div>
             <h2>{title}</h2>
-            <p>{authors ? authors.join(", "): null}</p>
+            <p className="authors">{authors ? authors.join(", "): null}</p>
             <p>{description}</p>
-            <a href={infoLink} target="_blank" rel="noopener noreferrer">More Info</a> 
-            <button onClick={props.save} id={id} book={JSON.stringify(book)}>{props.search ? "Save Book" : "Delete Book"}</button>
-            <br/>  
-            <br/>
+            <div className="infoLink">
+                <a href={infoLink} target="_blank" rel="noopener noreferrer">More Info</a> 
+            </div>
+            <button className="bookBtn" onClick={props.save} id={id} book={JSON.stringify(book)}>{props.search ? "Save Book" : "✖️"}</button>
         </section>
     )
 }

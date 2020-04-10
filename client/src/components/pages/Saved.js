@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import BookCard from "../BookCard";
+import "../assets/css/style.css";
 
 function Saved() {
 
@@ -9,7 +10,7 @@ function Saved() {
     useEffect(()=>{
         API.getSavedBooks()
             .then(res=>setSavedBooks(res.data));
-    },[savedBooks])
+    },[])
 
     console.log(savedBooks);
 
@@ -19,7 +20,7 @@ function Saved() {
     }
 
     return (
-        <article>
+        <article className="savedContainer">
             <h1>Saved</h1>
             {savedBooks.map(book => <BookCard volumeInfo={book} save={deleteBook} search={false}/>)}
         </article>
